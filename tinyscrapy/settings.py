@@ -8,13 +8,19 @@
 #     http://doc.scrapy.org/en/latest/topics/settings.html
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
+# ITEM_PIPELINES = [
+#   'scrapymongodb.MongoDBPipeline',
+# ]
+
 
 BOT_NAME = 'tinyscrapy'
 
 SPIDER_MODULES = ['tinyscrapy.spiders']
 NEWSPIDER_MODULE = 'tinyscrapy.spiders'
 
-
+ITEM_PIPELINES = {
+    "tinyscrapy.pipelines.DmozPipeline" : 1,
+}
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'tinyscrapy (+http://www.yourdomain.com)'
 
