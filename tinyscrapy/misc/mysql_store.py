@@ -17,4 +17,3 @@ class DmozItem(Model):
 
 peeweeDb.connect()
 DmozItem.create_table(True)
-    
