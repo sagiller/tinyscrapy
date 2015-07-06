@@ -6,10 +6,10 @@ class DmozSpider(scrapy.Spider):
     allowed_domains = ["dmoz.org"]
     start_urls = [
         "http://www.dmoz.org/Computers/Programming/Languages/Python/",
-        #"http://movie.douban.com/",
     ]
 
     def parse(self, response):
+
         for href in response.css("ul.directory.dir-col > li > a::attr('href')"):
             url = response.urljoin(href.extract())
             yield scrapy.Request(url, callback=self.parse_dir_contents)

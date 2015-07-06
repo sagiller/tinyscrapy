@@ -19,7 +19,7 @@ SPIDER_MODULES = ['tinyscrapy.spiders']
 NEWSPIDER_MODULE = 'tinyscrapy.spiders'
 
 ITEM_PIPELINES = {
-    "tinyscrapy.pipelines.DmozPipeline" : 1,
+    "tinyscrapy.pipelines.peeweeDmozPipeline" : 1,
 }
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'tinyscrapy (+http://www.yourdomain.com)'
